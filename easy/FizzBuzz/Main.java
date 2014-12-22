@@ -1,6 +1,5 @@
 /* Sample code to read in test cases: */
 import java.io.*;
-import java.util.Scanner;
 
 public class Main {
     public static void main (String[] args) throws IOException {
@@ -15,10 +14,10 @@ public class Main {
 
     private static void fizzBuzz(String line) {
         StringBuilder result = new StringBuilder();
-        Scanner sc = new Scanner(line);
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        int n = sc.nextInt();
+        String[] parts = line.split(" ");
+        int x = Integer.parseInt(parts[0]);
+        int y = Integer.parseInt(parts[1]);
+        int n = Integer.parseInt(parts[2]);
 
         for(int i = 1; i <= n; i++) {
             if(i % x == 0 && i % y == 0)
