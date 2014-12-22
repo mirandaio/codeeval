@@ -1,4 +1,3 @@
-/* Sample code to read in test cases: */
 import java.io.*;
 
 public class Main {
