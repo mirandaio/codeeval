@@ -16,15 +16,12 @@ public class Main {
             System.out.println(line);
         } else {
             byte i = 39;
-            StringBuilder result = new StringBuilder();
 
             while(i >= 0 && line.charAt(i) != ' ')
                 i--;
 
             i = i == -1 ? 40 : i;
-            result.append(line.substring(0, i));
-            result.append("... <Read More>");
-            System.out.println(result.toString());
+            System.out.println(line.substring(0, i) + "... <Read More>");
         }
     }
 }
