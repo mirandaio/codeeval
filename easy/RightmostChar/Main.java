@@ -12,8 +12,14 @@ public class Main {
     }
 
     private static void rightmostChar(String line) {
+        String[] parts = line.split(",");
+        String s = parts[0];
+        char c = parts[1].charAt(0);
+        int i;
 
-        for(int i = line.length() - 1; i >= 0; i--) {
+        for(i = s.length() - 1; i >= 0; i--) {
+            if(s.charAt(i) == c)
+                break;
         }
 
         System.out.println(i);
