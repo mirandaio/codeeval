@@ -18,11 +18,11 @@ public class Main {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         int min = Integer.MAX_VALUE;
         int index = -1;
+        int num;
 
-        for(int i = 0; i < nums.length; i++)
-            nums[i] = Integer.parseInt(parts[i]);
-
-        for(int num : nums) {
+        for(int i = 0; i < nums.length; i++) {
+            num = Integer.parseInt(parts[i]);
+            nums[i] = num;
             if(map.containsKey(num))
                 map.put(num, map.get(num) + 1);
             else
